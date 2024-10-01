@@ -5,7 +5,7 @@
   --sidebar-backcol: #000000;
   --header-content-backcol: #0c0f14;
   --main-content-backcol: #141922;
-  --sidebar-backcol: ;
+  --playbar-backcol: #282828;
   /* sizing */
   --playbar-height: 70px;
   --sidebar-width: 50px;
@@ -32,7 +32,7 @@
 
 #sidebar {
   width: var(--sidebar-width);
-  background-color: #000000;
+  background-color: var(--sidebar-backcol);
   height: 100%;
 }
 
@@ -44,19 +44,19 @@
 #header-content {
   height: var(--header-content-heigth);
   width: 100%;
-  background-color: #0c0f14;
+  background-color: var(--header-content-backcol);
 }
 
 #main-content {
   height: calc(100% - var(--header-content-heigth));
-  background-color: #141922;
+  background-color: var(--main-content-backcol);
 }
 
 /* footer */
 
 #playbar {
   height: var(--playbar-height);
-  background-color: #282828;
+  background-color: var(--playbar-backcol);
 }
 
 /* media query */
