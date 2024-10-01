@@ -2,7 +2,7 @@
 
 :root {
   /* color palette */
-  --sidebar-backcol: #000000;
+  --sidebar-backcol: grey;
   --header-content-backcol: #0c0f14;
   --main-content-backcol: #141922;
   --playbar-backcol: #282828;
