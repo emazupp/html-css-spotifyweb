@@ -1,0 +1,68 @@
+/* custom props */
+
+:root {
+  /* color palette */
+  --sidebar-backcol: #000000;
+  --header-content-backcol: #0c0f14;
+  --main-content-backcol: #141922;
+  --sidebar-backcol: ;
+  /* sizing */
+  --playbar-height: 70px;
+  --sidebar-width: 50px;
+  --header-content-heigth: 70px;
+}
+
+/* resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* utils */
+
+/* main */
+
+#wrapper {
+  width: 100%;
+  height: calc(100vh - var(--playbar-height));
+  max-width: 100%;
+  display: flex;
+}
+
+#sidebar {
+  width: var(--sidebar-width);
+  background-color: #000000;
+  height: 100%;
+}
+
+#container-content {
+  width: calc(100% - var(--sidebar-width));
+  height: 100%;
+}
+
+#header-content {
+  height: var(--header-content-heigth);
+  width: 100%;
+  background-color: #0c0f14;
+}
+
+#main-content {
+  height: calc(100% - var(--header-content-heigth));
+  background-color: #141922;
+}
+
+/* footer */
+
+#playbar {
+  height: var(--playbar-height);
+  background-color: #282828;
+}
+
+/* media query */
+
+@media screen and (min-width: 560px) {
+  :root {
+    --sidebar-width: 200px;
+  }
+}
