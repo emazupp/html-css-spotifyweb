@@ -30,6 +30,10 @@ img {
 
 /* utils */
 
+.hidden {
+  display: none;
+}
+
 /* main */
 #wrapper {
   width: 100%;
@@ -38,7 +42,6 @@ img {
   display: flex;
 }
 .nav-hidden-text {
-  display: none;
   color: white;
   font-size: 1.2em;
 }
@@ -83,6 +86,20 @@ img {
 
 #nav-download > img {
   width: 20px;
+}
+
+#playlist-button {
+  background-color: black;
+  display: block;
+  width: 40px;
+  aspect-ratio: 1;
+  font-size: 32px;
+  text-align: center;
+}
+
+.upper-sidebar-hidden-list {
+  padding-top: 20px;
+  color: white;
 }
 
 /* main content */
@@ -153,6 +170,10 @@ img {
   #nav-item-selector {
     position: absolute;
     left: 0px;
+    display: block;
+  }
+
+  .upper-sidebar-hidden-list {
     display: block;
   }
 }
