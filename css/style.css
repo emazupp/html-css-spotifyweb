@@ -13,7 +13,7 @@
   --playbar-height: 70px;
   --sidebar-width: 50px;
   --header-content-heigth: 70px;
-  --nav-item-width: 34px;
+  --nav-item-width: 25px;
   /* padding/margin */
   --logo-margin-bottom: 18px;
   --sidebar-padding-left: 1rem;
@@ -84,6 +84,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 10px 5px;
+  overflow-y: auto;
 }
 
 /* sidebar logo */
@@ -93,7 +94,7 @@ body {
 }
 
 .sidebar-logo > img {
-  width: 40px;
+  width: 30px;
 }
 
 /* sidebar links list */
@@ -137,12 +138,21 @@ body {
   background-color: var(--primary-color);
 }
 
+.sidebar-create-playlist {
+  margin-top: var(--logo-margin-bottom);
+}
+
 .sidebar-create-playlist > .playlist-title {
   color: var(--primary-color);
   font-weight: 600;
 }
 
 /* sidebar playlist */
+.sidebar-playlist {
+  width: 100%;
+  overflow-y: auto;
+  min-height: 100px;
+}
 
 .sidebar-playlist li {
   line-height: 30px;
@@ -166,7 +176,6 @@ body {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border: none;
-  margin-right: var(--sidebar-padding-left);
 }
 
 .install-button > img {
@@ -221,11 +230,12 @@ body {
 
 /************** MEDIA QUERIES *************/
 
-/* sm */
+/* SM */
 
 @media screen and (min-width: 576px) {
   :root {
     --sidebar-width: 200px;
+    --nav-item-width: 35px;
   }
 
   /* utils */
@@ -292,6 +302,7 @@ body {
 
   .install-button {
     border-bottom: 1px solid var(--secondary-color);
+    margin-right: var(--sidebar-padding-left);
   }
 }
 
@@ -316,7 +327,7 @@ body {
   }
 }
 
-/* lg */
+/* LG */
 
 @media screen and (min-width: 992px) {
 }
