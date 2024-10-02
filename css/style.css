@@ -323,6 +323,12 @@ body {
   font-size: 1.7rem;
 }
 
+.card-section-title > p {
+  font-size: 0.9rem;
+  margin: 10px 0px;
+  font-weight: 600;
+}
+
 .card {
   flex: 0 1 47%;
 }
@@ -581,6 +587,13 @@ body {
   /* card */
   .card {
     flex-basis: 23%;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+  .card-title {
+    font-size: 1rem;
   }
   .card-container {
     justify-content: flex-start;
