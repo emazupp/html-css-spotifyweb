@@ -260,6 +260,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 10px;
 }
 
 #upgrade-button {
@@ -275,6 +276,26 @@ body {
 #main-content {
   height: calc(100% - var(--header-content-heigth));
   background-color: var(--main-content-backcol);
+  overflow-y: auto;
+}
+
+/* genres */
+
+.musical-genres {
+  padding-top: 20px;
+  height: 100px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.musical-genres > span {
+  margin: 10px;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.musical-genres > .genre-selected {
+  border-bottom: 2px solid lime;
 }
 
 /* FOOTER */
