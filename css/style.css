@@ -506,7 +506,7 @@ body {
 }
 
 .fa-play-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 /* playbar bar */
@@ -672,6 +672,11 @@ body {
     display: flex;
     gap: 2px;
     font-size: 0.8rem;
+  }
+
+  .playbar-preview-icon {
+    display: flex;
+    gap: 10px;
   }
 }
 
