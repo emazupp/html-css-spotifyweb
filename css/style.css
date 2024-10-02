@@ -39,7 +39,7 @@ button {
   font-family: inherit;
 }
 
-/* utils */
+/* UTILS */
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -62,8 +62,49 @@ body {
   display: inline;
 }
 
+.d-inline-block {
+  display: inline-block;
+}
+
 .nav-hidden-text {
   padding-left: var(--sidebar-text-padding);
+}
+
+/****** REUSABLE BAR PROGRESS ********/
+
+.playbar-bar {
+  flex: 1 0 20%;
+  max-width: 100px;
+}
+
+.playbar-bar > .total-bar {
+  min-width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: grey;
+}
+
+.playbar-bar .progress-bar {
+  background-color: var(--primary-color);
+  width: 50%;
+  border-radius: 2px;
+  height: 4px;
+  position: relative;
+}
+
+.playbar-bar:hover .circle-progress-bar {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.playbar-bar:hover .progress-bar {
+  background-color: lime;
 }
 
 /* main */
@@ -237,7 +278,7 @@ body {
   width: 30%;
   display: flex;
   align-items: center;
-  padding: 0px 5px;
+  padding: 0px 8px;
   gap: 10px;
 }
 
@@ -247,7 +288,7 @@ body {
 }
 
 .image-container > img {
-  width: 100%;
+  width: 30px;
   object-fit: cover;
 }
 
@@ -283,14 +324,22 @@ body {
 
 /* volume settings */
 
-.playbar-volume-settings {
+#playbar-volume-settings {
   width: 30%;
-
-  /* debug */
-  height: var(--playbar-height);
-  background-color: red;
-  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+  gap: 10px;
+  overflow-x: auto;
 }
+
+#playbar-volume-settings i {
+  color: var(--primary-color);
+  flex: 0 1 10px;
+}
+
+/* bar reusable */
 
 /************** MEDIA QUERIES *************/
 
