@@ -261,7 +261,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 #upgrade-button {
@@ -270,6 +270,10 @@ body {
   border-radius: 20px;
   background-color: transparent;
   color: var(--primary-color);
+}
+
+#upgrade-button:hover {
+  transform: scale(1.1);
 }
 
 /* MAIN CONTENT */
@@ -298,6 +302,10 @@ body {
   margin: 10px;
   padding-bottom: 5px;
   font-weight: 600;
+}
+
+.musical-genres > span:hover {
+  color: var(--primary-color);
 }
 
 .musical-genres > .genre-selected {
@@ -333,9 +341,51 @@ body {
   flex: 0 1 47%;
 }
 
-.card > img {
+.inner-container-img {
+  position: relative;
+}
+
+.hover-playbutton {
+  border: 4px solid var(--primary-color);
+  width: 70px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-playbutton > .fa-play {
+  width: 70px;
+  aspect-ratio: 1;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  font-size: 2.7rem;
+  color: var(--primary-color);
+}
+
+.card > div > img {
   width: 100%;
   object-fit: cover;
+  opacity: 1;
+}
+
+#main-content .last-section img {
+  border-radius: 50%;
+}
+
+.last-section {
+  margin-bottom: 50px;
+}
+
+.card .inner-container-img:hover > img {
+  opacity: 0.3;
+}
+
+.card .inner-container-img:hover .hover-playbutton {
+  display: block;
 }
 
 /* card description */
@@ -391,14 +441,18 @@ body {
   object-fit: cover;
 }
 
-.music-name > span:nth-child(1) {
+.music-name > span > b {
   font-size: 0.9rem;
   color: var(--primary-color);
 }
 
-.music-name > span:not(:nth-child(1)) {
+.music-name > div {
   font-size: 0.7rem;
   color: var(--secondary-color);
+}
+
+.music-name > div:hover {
+  color: var(--primary-color);
 }
 
 .playbar-preview-icon {
@@ -409,6 +463,11 @@ body {
 .fa-folder {
   color: var(--secondary-color);
   margin-bottom: 5px;
+}
+
+.fa-heart:hover,
+.fa-folder:hover {
+  color: var(--primary-color);
 }
 
 /* music command */
@@ -444,6 +503,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fa-play-container:hover {
+  transform: scale(1.1);
 }
 
 /* playbar bar */
@@ -603,6 +666,12 @@ body {
   /* playbar */
   .playbar-music-command {
     padding: 10px 10% 0px;
+  }
+
+  .music-name > div {
+    display: flex;
+    gap: 2px;
+    font-size: 0.8rem;
   }
 }
 
