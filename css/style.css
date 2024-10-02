@@ -10,7 +10,9 @@
   --playbar-height: 70px;
   --sidebar-width: 50px;
   --header-content-heigth: 70px;
-  --nav-item-width: 35px;
+  --nav-item-width: 34px;
+  /* padding/margin */
+  --logo-margin-bottom: 20px;
 }
 
 /* resets */
@@ -54,14 +56,7 @@ img {
   display: flex;
 }
 
-/* navbar */
-
-#nav-item-selector {
-  display: none;
-  height: 40px;
-  width: 5px;
-  background-color: #2bff00;
-}
+/* sidebar */
 
 #sidebar {
   width: var(--sidebar-width);
@@ -69,45 +64,37 @@ img {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 5px;
 }
 
-.sidebar-item > img:not(#nav-download > img) {
+/* sidebar logo */
+
+.sidebar-logo > img {
+  width: 40px;
+}
+
+.sidebar-item-width {
   width: var(--nav-item-width);
 }
 
-.sidebar-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+.nav-hidden-text,
+.sidebar-playlist,
+.sidebar-create-playlist {
+  color: white;
 }
 
-#nav-profile > img {
-  padding: 4px;
-  background-color: darkgrey;
-  border-radius: 45%;
+/* sidebar bottom */
+
+.sidebar-bottom {
+  margin-top: auto;
 }
 
-#nav-download > img {
-  width: 20px;
-}
-
-#playlist-button {
-  background-color: black;
-  display: block;
-  width: 40px;
-  aspect-ratio: 1;
-  font-size: 32px;
+.install-button {
   text-align: center;
 }
 
-.upper-sidebar-hidden-list {
-  padding-top: 20px;
-  color: white;
+.install-button > img {
+  width: 17px;
 }
 
 /* main content */
@@ -163,45 +150,6 @@ img {
   }
 
   /* sidebar */
-  #sidebar {
-    align-items: flex-start;
-  }
-
-  .upper-sidebar {
-    padding-left: 15px;
-  }
-
-  .lower-sidebar {
-    padding-left: 15px;
-  }
-  .nav-hidden-text {
-    display: block;
-  }
-  .sidebar-list {
-    align-items: flex-start;
-  }
-
-  .sidebar-item {
-    display: flex;
-    align-items: center;
-  }
-  #nav-logo {
-    height: calc(var(--header-content-heigth) - 15px);
-    font-size: 1.7em;
-  }
-  .sidebar-item:nth-child(1) > #nav-logo-img {
-    width: 50px;
-  }
-
-  #nav-item-selector {
-    position: absolute;
-    left: 0px;
-    display: block;
-  }
-
-  .upper-sidebar-hidden-list {
-    display: block;
-  }
 }
 
 /* md */

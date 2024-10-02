@@ -38,17 +38,32 @@
           <div class="sidebar-links-list">
             <ul>
               <li class="sidebar-item" id="nav-home">
-                <span id="nav-item-selector"></span>
-                <img src="./img/home.svg" alt="home" />
-                <span class="nav-hidden-text d-none"> &nbsp;Home</span>
+                <img
+                  class="sidebar-item-width"
+                  src="./img/home.svg"
+                  alt="home"
+                />
+                <span class="nav-hidden-text d-none d-sm-inline">
+                  &nbsp;Home</span
+                >
               </li>
               <li class="sidebar-item" id="nav-search">
-                <img src="./img/search.svg" alt="search" />
-                <span class="nav-hidden-text d-none"> &nbsp;Cerca</span>
+                <img
+                  class="sidebar-item-width"
+                  src="./img/search.svg"
+                  alt="search"
+                />
+                <span class="nav-hidden-text d-none d-sm-inline">
+                  &nbsp;Cerca</span
+                >
               </li>
               <li class="sidebar-item" id="nav-libreria">
-                <img src="./img/libreria.svg" alt="libreria" />
-                <span class="nav-hidden-text d-none">
+                <img
+                  class="sidebar-item-width"
+                  src="./img/libreria.svg"
+                  alt="libreria"
+                />
+                <span class="nav-hidden-text d-none d-sm-inline">
                   &nbsp;La tua libreria</span
                 >
               </li>
@@ -56,13 +71,9 @@
           </div>
           <!-- sidebar create playlist -->
           <div class="sidebar-create-playlist d-none d-sm-block">
-            <ul>
-              <li><b>PLAYLIST</b></li>
-              <li>
-                <span id="playlist-button">&plus;</span
-                ><span>Crea Playlist</span>
-              </li>
-            </ul>
+            <span class="playlist-title">PLAYLIST</span>
+            <button class="playlist-button"></button>
+            <span>Crea Playlist</span>
           </div>
 
           <!-- sidebar playlist -->
@@ -83,7 +94,11 @@
             </div>
 
             <div class="profile">
-              <img src="./img/profile.svg" alt="profile" />
+              <img
+                class="sidebar-item-width"
+                src="./img/profile.svg"
+                alt="profile"
+              />
               <span class="nav-hidden-text d-none"> &nbsp;Jonh Doe</span>
             </div>
           </div>
