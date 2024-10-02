@@ -344,6 +344,7 @@ body {
   font-size: 0.9rem;
   margin: 10px 0px 5px;
   font-weight: 600;
+  text-align: center;
 }
 
 .card-description {
@@ -575,6 +576,15 @@ body {
     display: inline;
   }
 
+  /* MAIN CONTENT */
+
+  /* card */
+  .card {
+    flex-basis: 23%;
+  }
+  .card-container {
+    justify-content: flex-start;
+  }
   /* FOOTER */
 
   /* playbar */
@@ -586,4 +596,9 @@ body {
 /* LG */
 
 @media screen and (min-width: 992px) {
+  /* MAIN CONTENT */
+  /* card */
+  .card {
+    flex-basis: 15%;
+  }
 }
