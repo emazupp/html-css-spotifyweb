@@ -2,10 +2,13 @@
 
 :root {
   /* color palette */
+  --primary-color: white;
+  --secondary-color: #aaa;
   --sidebar-backcol: #000000;
   --header-content-backcol: #0c0f14;
   --main-content-backcol: #141922;
   --playbar-backcol: #282828;
+  --gray-button-user: #a3a3a3;
   /* sizing */
   --playbar-height: 70px;
   --sidebar-width: 50px;
@@ -13,6 +16,8 @@
   --nav-item-width: 34px;
   /* padding/margin */
   --logo-margin-bottom: 18px;
+  --sidebar-padding-left: 1rem;
+  --sidebar-text-padding: 0.2rem;
 }
 
 /* resets */
@@ -30,7 +35,16 @@ img {
   display: inline;
 }
 
+button {
+  font-family: inherit;
+}
+
 /* utils */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--secondary-color);
+}
 
 .d-none {
   display: none;
@@ -48,6 +62,10 @@ img {
   display: inline;
 }
 
+.nav-hidden-text {
+  padding-left: var(--sidebar-text-padding);
+}
+
 /* main */
 #wrapper {
   width: 100%;
@@ -56,7 +74,7 @@ img {
   display: flex;
 }
 
-/* sidebar */
+/* SIDEBAR */
 
 #sidebar {
   width: var(--sidebar-width);
@@ -84,16 +102,59 @@ img {
   margin-bottom: calc(var(--logo-margin-bottom) / 2);
 }
 
+.sidebar-links-list > ul > li:hover {
+  color: var(--primary-color);
+}
+
 .sidebar-item-width {
   width: var(--nav-item-width);
 }
 
-.nav-hidden-text,
-.sidebar-playlist,
-.sidebar-create-playlist {
-  color: white;
+/* sidebar create playlist */
+
+.playlist-button {
+  background-color: var(--gray-button-user);
+  width: 40px;
+  aspect-ratio: 1;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 
+.create-playlist-container > .nav-hidden-text {
+  padding-left: 0.5rem;
+}
+
+.create-playlist-container {
+  margin-top: 0.5rem;
+}
+
+.create-playlist-container:hover {
+  color: var(--primary-color);
+}
+
+.create-playlist-container:hover > .playlist-button {
+  background-color: var(--primary-color);
+}
+
+.sidebar-create-playlist > .playlist-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* sidebar playlist */
+
+.sidebar-playlist li {
+  line-height: 30px;
+  font-size: 0.8rem;
+}
+.sidebar-playlist li:hover {
+  color: var(--primary-color);
+}
+
+.sidebar-playlist > ul {
+  margin-top: 8px;
+}
 /* sidebar bottom */
 
 .sidebar-bottom {
@@ -102,18 +163,35 @@ img {
 
 .install-button {
   text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border: none;
+  margin-right: var(--sidebar-padding-left);
 }
 
 .install-button > img {
   width: 17px;
 }
 
+.install-button > span {
+  font-size: 0.8rem;
+}
+
+.install-button > span:hover {
+  color: var(--primary-color);
+}
+
 .profile > .sidebar-item-width {
   width: var(--nav-item-width);
   aspect-ratio: 1;
-  background-color: gray;
+  background-color: var(--gray-button-user);
   border-radius: 50%;
   overflow: hidden;
+}
+
+.profile > .nav-hidden-text {
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 /* main content */
@@ -141,7 +219,7 @@ img {
   background-color: var(--playbar-backcol);
 }
 
-/* media query */
+/************** MEDIA QUERIES *************/
 
 /* sm */
 
@@ -168,10 +246,56 @@ img {
     display: inline;
   }
 
-  /* sidebar */
+  .sidebar-item-flexed {
+    display: flex;
+    align-items: center;
+  }
+  /* SIDEBAR */
+
+  #sidebar {
+    align-items: flex-start;
+    padding: 10px 0px;
+  }
+
+  /* sidebar logo */
+  .sidebar-logo {
+    margin-left: var(--sidebar-padding-left);
+  }
+
+  .sidebar-logo > img {
+    width: 150px;
+  }
+
+  /* sidebar links list */
+
+  .sidebar-links-list > ul > li {
+    border-left: 2px solid transparent;
+    padding-left: calc(var(--sidebar-padding-left) - 3px);
+  }
+
+  .sidebar-links-list > ul > .selected {
+    border-left: 2px solid lime;
+    padding-left: calc(var(--sidebar-padding-left) - 3px);
+    color: var(--primary-color);
+  }
+  /* sidebar bottom */
+
+  .sidebar-bottom,
+  .sidebar-create-playlist,
+  .sidebar-playlist {
+    padding-left: var(--sidebar-padding-left);
+  }
+
+  .sidebar-bottom {
+    width: 100%;
+  }
+
+  .install-button {
+    border-bottom: 1px solid var(--secondary-color);
+  }
 }
 
-/* md */
+/* MD */
 
 @media screen and (min-width: 768px) {
   /* utils */
