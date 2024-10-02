@@ -306,19 +306,18 @@ body {
   margin-left: 10px;
 }
 
-.fa-heart .fa-folder {
+.fa-heart,
+.fa-folder {
   color: var(--secondary-color);
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 /* music command */
 
 .playbar-music-command {
-  /* width: 40%; */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  padding: 10px 5px 0px;
 }
 
 .playbar-music-command i {
@@ -331,15 +330,17 @@ body {
 
 .playbar-commands {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 175px;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .fa-play-container {
   border: 3px solid var(--primary-color);
   border-radius: 50%;
-  width: 25px;
+  width: 30px;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
@@ -348,8 +349,24 @@ body {
 
 /* playbar bar */
 
-.playbar-music-command .playbar-bar {
-  flex: 1 0 80%;
+.playbar-music-command > .playbar-bar {
+  width: 100%;
+  flex: 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: none;
+}
+
+.playbar-bar > .current-time,
+.playbar-bar > .total-time {
+  font-size: 0.7rem;
+  margin: 0px 10px;
+  color: var(--primary-color);
+}
+
+.playbar-music-command .total-bar {
+  flex-grow: 1;
 }
 
 /* volume settings */
@@ -465,6 +482,13 @@ body {
 
   .d-md-inline {
     display: inline;
+  }
+
+  /* FOOTER */
+
+  /* playbar */
+  .playbar-music-command {
+    padding: 10px 10% 0px;
   }
 }
 
