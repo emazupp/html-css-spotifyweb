@@ -251,11 +251,26 @@ body {
   height: 100%;
 }
 
+/* HEADER */
+
 #header-content {
   height: var(--header-content-heigth);
   width: 100%;
   background-color: var(--header-content-backcol);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+
+#upgrade-button {
+  border: 1px solid var(--primary-color);
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+/* CONTENT */
 
 #main-content {
   height: calc(100% - var(--header-content-heigth));
