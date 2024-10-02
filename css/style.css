@@ -275,7 +275,7 @@ body {
 /* music preview */
 
 .playbar-music-preview {
-  width: 30%;
+  /* width: 30%; */
   display: flex;
   align-items: center;
   padding: 0px 8px;
@@ -314,18 +314,48 @@ body {
 /* music command */
 
 .playbar-music-command {
-  width: 40%;
+  /* width: 40%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
 
-  /* debug */
-  height: var(--playbar-height);
-  background-color: red;
-  border: 1px solid white;
+.playbar-music-command i {
+  color: var(--primary-color);
+}
+
+.playbar-music-command .fa-play {
+  vertical-align: middle;
+}
+
+.playbar-commands {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 175px;
+}
+
+.fa-play-container {
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  width: 25px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* playbar bar */
+
+.playbar-music-command .playbar-bar {
+  flex: 1 0 80%;
 }
 
 /* volume settings */
 
 #playbar-volume-settings {
-  width: 30%;
+  /* width: 30%; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -338,8 +368,6 @@ body {
   color: var(--primary-color);
   flex: 0 1 10px;
 }
-
-/* bar reusable */
 
 /************** MEDIA QUERIES *************/
 
