@@ -21,62 +21,81 @@
   <body>
     <main>
       <div id="wrapper">
+        <!-- SIDEBAR -->
         <nav id="sidebar">
-          <div class="upper-sidebar">
-            <ul class="sidebar-list">
-              <li class="sidebar-item" id="nav-logo">
-                <img
-                  id="nav-logo-img"
-                  src="./img/logo-small.svg"
-                  alt="logo-small"
-                />
-                <span class="nav-hidden-text hidden">&nbsp;Spotify</span>
-              </li>
+          <!-- sidebar logo -->
+          <div class="sidebar-logo">
+            <img
+              class="d-sm-none"
+              id="nav-logo-img"
+              src="./img/logo-small.svg"
+              alt="logo-small"
+            />
+            <img class="d-none d-sm-block" src="./img/logo.svg" alt="logo" />
+          </div>
+          <!-- sidebar links list -->
+          <div class="sidebar-links-list">
+            <ul>
               <li class="sidebar-item" id="nav-home">
                 <span id="nav-item-selector"></span>
                 <img src="./img/home.svg" alt="home" />
-                <span class="nav-hidden-text hidden"> &nbsp;Home</span>
+                <span class="nav-hidden-text d-none"> &nbsp;Home</span>
               </li>
               <li class="sidebar-item" id="nav-search">
                 <img src="./img/search.svg" alt="search" />
-                <span class="nav-hidden-text hidden"> &nbsp;Cerca</span>
+                <span class="nav-hidden-text d-none"> &nbsp;Cerca</span>
               </li>
               <li class="sidebar-item" id="nav-libreria">
                 <img src="./img/libreria.svg" alt="libreria" />
-                <span class="nav-hidden-text hidden">
+                <span class="nav-hidden-text d-none">
                   &nbsp;La tua libreria</span
                 >
               </li>
             </ul>
-            <div class="upper-sidebar-hidden-list hidden">
-              <ul>
-                <li><b>PLAYLIST</b></li>
-                <li>
-                  <span id="playlist-button">&plus;</span
-                  ><span>Crea Playlist</span>
-                </li>
-              </ul>
-            </div>
           </div>
-          <div class="lower-sidebar">
-            <ul class="sidebar-list">
-              <li class="sidebar-item" id="nav-download">
-                <img src="./img/download.svg" alt="download" />
-                <span class="nav-hidden-text hidden"> &nbsp;Installa app</span>
-              </li>
-              <li class="sidebar-item" id="nav-profile">
-                <img src="./img/profile.svg" alt="profile" />
-                <span class="nav-hidden-text hidden"> &nbsp;Jonh Doe</span>
+          <!-- sidebar create playlist -->
+          <div class="sidebar-create-playlist d-none d-sm-block">
+            <ul>
+              <li><b>PLAYLIST</b></li>
+              <li>
+                <span id="playlist-button">&plus;</span
+                ><span>Crea Playlist</span>
               </li>
             </ul>
           </div>
+          <!-- sidebar playlist -->
+          <div class="sidebar-playlist d-none d-sm-block">
+            <ul>
+              <li>Playlist</li>
+              <li>Playlist</li>
+              <li>Playlist</li>
+              <li>Playlist</li>
+            </ul>
+          </div>
+          <!-- sidebar bottom -->
+          <div class="sidebar-bottom">
+            <div class="install-button">
+              <img src="./img/download.svg" alt="download" />
+              <span class="nav-hidden-text d-none"> &nbsp;Installa app</span>
+            </div>
+
+            <div class="profile">
+              <img src="./img/profile.svg" alt="profile" />
+              <span class="nav-hidden-text d-none"> &nbsp;Jonh Doe</span>
+            </div>
+          </div>
         </nav>
+
         <div id="container-content">
+          <!-- HEADER CONTENT -->
           <header id="header-content"></header>
+          <!-- MAIN CONTENT -->
           <div id="main-content"></div>
         </div>
       </div>
     </main>
+
+    <!-- PLAYBAR -->
     <footer id="playbar"></footer>
   </body>
 </html>
