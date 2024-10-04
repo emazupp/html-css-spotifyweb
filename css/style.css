@@ -293,18 +293,25 @@ body {
   align-items: center;
 }
 
-.musical-genres > span {
+.musical-genres > .genre {
   margin: 10px;
   padding-bottom: 5px;
   font-weight: 600;
+  position: relative;
 }
 
-.musical-genres > span:hover {
+.musical-genres > .genre:hover {
   color: var(--primary-color);
 }
 
-.musical-genres > .genre-selected {
-  border-bottom: 2px solid lime;
+.musical-genres > .genre > .selected {
+  width: 40px;
+  height: 3px;
+  background-color: lime;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 100%);
 }
 
 /* content */
